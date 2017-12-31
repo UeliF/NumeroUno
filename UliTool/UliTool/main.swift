@@ -10,3 +10,15 @@ import Foundation
 
 print("Hello, World!")
 
+
+var uliTool: UliTool = UliTool( name:"inschtanz eis")
+
+uliTool.increment()
+uliTool.status()
+
+uliTool.increment(amount: 12)
+uliTool.status()
+
+uliTool.increment()
+uliTool.status()
+

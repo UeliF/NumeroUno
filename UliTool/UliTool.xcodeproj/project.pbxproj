@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813304401FF90F4B003D53F7 /* UliTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133043F1FF90F4B003D53F7 /* UliTool.swift */; };
 		81E937F31FF90E0000F7B6C4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E937F21FF90E0000F7B6C4 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8133043F1FF90F4B003D53F7 /* UliTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UliTool.swift; sourceTree = "<group>"; };
 		81E937EF1FF90E0000F7B6C4 /* UliTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UliTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E937F21FF90E0000F7B6C4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				81E937F21FF90E0000F7B6C4 /* main.swift */,
+				8133043F1FF90F4B003D53F7 /* UliTool.swift */,
 			);
 			path = UliTool;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813304401FF90F4B003D53F7 /* UliTool.swift in Sources */,
 				81E937F31FF90E0000F7B6C4 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +254,7 @@
 				81E937F81FF90E0000F7B6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
