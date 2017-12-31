@@ -16,7 +16,9 @@ public class UliTool
     var count: Int = 0;
 
     init( name: String){
-        self.name = name
+        print("Bitte name angeben")
+        let response = readLine()        
+        self.name = name + "_" + response!
     }
     
     func increment(){

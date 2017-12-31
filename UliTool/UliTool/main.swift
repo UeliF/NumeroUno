@@ -8,10 +8,8 @@
 
 import Foundation
 
-print("Hello, World!")
 
-
-var uliTool: UliTool = UliTool( name:"inschtanz eis")
+var uliTool: UliTool = UliTool(name:"UliToolNumeroUnohal")
 
 uliTool.increment()
 uliTool.status()
