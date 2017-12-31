@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8133044E1FF92629003D53F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133044D1FF92629003D53F7 /* AppDelegate.swift */; };
+		813304501FF92629003D53F7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8133044F1FF92629003D53F7 /* GameScene.sks */; };
+		813304521FF92629003D53F7 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 813304511FF92629003D53F7 /* Actions.sks */; };
+		813304541FF92629003D53F7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304531FF92629003D53F7 /* GameScene.swift */; };
+		813304561FF92629003D53F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304551FF92629003D53F7 /* ViewController.swift */; };
+		813304581FF9262A003D53F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813304571FF9262A003D53F7 /* Assets.xcassets */; };
+		8133045B1FF9262A003D53F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813304591FF9262A003D53F7 /* Main.storyboard */; };
+		813304661FF9262A003D53F7 /* PerlhuhnJagdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304651FF9262A003D53F7 /* PerlhuhnJagdTests.swift */; };
+		813304711FF9262B003D53F7 /* PerlhuhnJagdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		813304621FF9262A003D53F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 813304421FF92629003D53F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 813304491FF92629003D53F7;
+			remoteInfo = PerlhuhnJagd;
+		};
+		8133046D1FF9262B003D53F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 813304421FF92629003D53F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 813304491FF92629003D53F7;
+			remoteInfo = PerlhuhnJagd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8133044A1FF92629003D53F7 /* PerlhuhnJagd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerlhuhnJagd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8133044D1FF92629003D53F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8133044F1FF92629003D53F7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		813304511FF92629003D53F7 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		813304531FF92629003D53F7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		813304551FF92629003D53F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		813304571FF9262A003D53F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8133045A1FF9262A003D53F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8133045C1FF9262A003D53F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		813304611FF9262A003D53F7 /* PerlhuhnJagdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerlhuhnJagdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		813304651FF9262A003D53F7 /* PerlhuhnJagdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerlhuhnJagdTests.swift; sourceTree = "<group>"; };
+		813304671FF9262A003D53F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8133046C1FF9262B003D53F7 /* PerlhuhnJagdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerlhuhnJagdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerlhuhnJagdUITests.swift; sourceTree = "<group>"; };
+		813304721FF9262B003D53F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		813304471FF92629003D53F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8133045E1FF9262A003D53F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813304691FF9262B003D53F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		813304411FF92629003D53F7 = {
+			isa = PBXGroup;
+			children = (
+				8133044C1FF92629003D53F7 /* PerlhuhnJagd */,
+				813304641FF9262A003D53F7 /* PerlhuhnJagdTests */,
+				8133046F1FF9262B003D53F7 /* PerlhuhnJagdUITests */,
+				8133044B1FF92629003D53F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8133044B1FF92629003D53F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8133044A1FF92629003D53F7 /* PerlhuhnJagd.app */,
+				813304611FF9262A003D53F7 /* PerlhuhnJagdTests.xctest */,
+				8133046C1FF9262B003D53F7 /* PerlhuhnJagdUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8133044C1FF92629003D53F7 /* PerlhuhnJagd */ = {
+			isa = PBXGroup;
+			children = (
+				8133044D1FF92629003D53F7 /* AppDelegate.swift */,
+				8133044F1FF92629003D53F7 /* GameScene.sks */,
+				813304511FF92629003D53F7 /* Actions.sks */,
+				813304531FF92629003D53F7 /* GameScene.swift */,
+				813304551FF92629003D53F7 /* ViewController.swift */,
+				813304571FF9262A003D53F7 /* Assets.xcassets */,
+				813304591FF9262A003D53F7 /* Main.storyboard */,
+				8133045C1FF9262A003D53F7 /* Info.plist */,
+			);
+			path = PerlhuhnJagd;
+			sourceTree = "<group>";
+		};
+		813304641FF9262A003D53F7 /* PerlhuhnJagdTests */ = {
+			isa = PBXGroup;
+			children = (
+				813304651FF9262A003D53F7 /* PerlhuhnJagdTests.swift */,
+				813304671FF9262A003D53F7 /* Info.plist */,
+			);
+			path = PerlhuhnJagdTests;
+			sourceTree = "<group>";
+		};
+		8133046F1FF9262B003D53F7 /* PerlhuhnJagdUITests */ = {
+			isa = PBXGroup;
+			children = (
+				813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */,
+				813304721FF9262B003D53F7 /* Info.plist */,
+			);
+			path = PerlhuhnJagdUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		813304491FF92629003D53F7 /* PerlhuhnJagd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 813304751FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagd" */;
+			buildPhases = (
+				813304461FF92629003D53F7 /* Sources */,
+				813304471FF92629003D53F7 /* Frameworks */,
+				813304481FF92629003D53F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerlhuhnJagd;
+			productName = PerlhuhnJagd;
+			productReference = 8133044A1FF92629003D53F7 /* PerlhuhnJagd.app */;
+			productType = "com.apple.product-type.application";
+		};
+		813304601FF9262A003D53F7 /* PerlhuhnJagdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 813304781FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagdTests" */;
+			buildPhases = (
+				8133045D1FF9262A003D53F7 /* Sources */,
+				8133045E1FF9262A003D53F7 /* Frameworks */,
+				8133045F1FF9262A003D53F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				813304631FF9262A003D53F7 /* PBXTargetDependency */,
+			);
+			name = PerlhuhnJagdTests;
+			productName = PerlhuhnJagdTests;
+			productReference = 813304611FF9262A003D53F7 /* PerlhuhnJagdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8133046B1FF9262B003D53F7 /* PerlhuhnJagdUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8133047B1FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagdUITests" */;
+			buildPhases = (
+				813304681FF9262B003D53F7 /* Sources */,
+				813304691FF9262B003D53F7 /* Frameworks */,
+				8133046A1FF9262B003D53F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8133046E1FF9262B003D53F7 /* PBXTargetDependency */,
+			);
+			name = PerlhuhnJagdUITests;
+			productName = PerlhuhnJagdUITests;
+			productReference = 8133046C1FF9262B003D53F7 /* PerlhuhnJagdUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		813304421FF92629003D53F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = hub;
+				TargetAttributes = {
+					813304491FF92629003D53F7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					813304601FF9262A003D53F7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 813304491FF92629003D53F7;
+					};
+					8133046B1FF9262B003D53F7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 813304491FF92629003D53F7;
+					};
+				};
+			};
+			buildConfigurationList = 813304451FF92629003D53F7 /* Build configuration list for PBXProject "PerlhuhnJagd" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 813304411FF92629003D53F7;
+			productRefGroup = 8133044B1FF92629003D53F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				813304491FF92629003D53F7 /* PerlhuhnJagd */,
+				813304601FF9262A003D53F7 /* PerlhuhnJagdTests */,
+				8133046B1FF9262B003D53F7 /* PerlhuhnJagdUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		813304481FF92629003D53F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813304501FF92629003D53F7 /* GameScene.sks in Resources */,
+				813304581FF9262A003D53F7 /* Assets.xcassets in Resources */,
+				813304521FF92629003D53F7 /* Actions.sks in Resources */,
+				8133045B1FF9262A003D53F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8133045F1FF9262A003D53F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8133046A1FF9262B003D53F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		813304461FF92629003D53F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813304561FF92629003D53F7 /* ViewController.swift in Sources */,
+				813304541FF92629003D53F7 /* GameScene.swift in Sources */,
+				8133044E1FF92629003D53F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8133045D1FF9262A003D53F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813304661FF9262A003D53F7 /* PerlhuhnJagdTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		813304681FF9262B003D53F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813304711FF9262B003D53F7 /* PerlhuhnJagdUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		813304631FF9262A003D53F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 813304491FF92629003D53F7 /* PerlhuhnJagd */;
+			targetProxy = 813304621FF9262A003D53F7 /* PBXContainerItemProxy */;
+		};
+		8133046E1FF9262B003D53F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 813304491FF92629003D53F7 /* PerlhuhnJagd */;
+			targetProxy = 8133046D1FF9262B003D53F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		813304591FF9262A003D53F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8133045A1FF9262A003D53F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		813304731FF9262B003D53F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		813304741FF9262B003D53F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		813304761FF9262B003D53F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PerlhuhnJagd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		813304771FF9262B003D53F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PerlhuhnJagd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		813304791FF9262B003D53F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PerlhuhnJagdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerlhuhnJagd.app/Contents/MacOS/PerlhuhnJagd";
+			};
+			name = Debug;
+		};
+		8133047A1FF9262B003D53F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PerlhuhnJagdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerlhuhnJagd.app/Contents/MacOS/PerlhuhnJagd";
+			};
+			name = Release;
+		};
+		8133047C1FF9262B003D53F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PerlhuhnJagdUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PerlhuhnJagd;
+			};
+			name = Debug;
+		};
+		8133047D1FF9262B003D53F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PerlhuhnJagdUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PerlhuhnJagd;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		813304451FF92629003D53F7 /* Build configuration list for PBXProject "PerlhuhnJagd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813304731FF9262B003D53F7 /* Debug */,
+				813304741FF9262B003D53F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		813304751FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813304761FF9262B003D53F7 /* Debug */,
+				813304771FF9262B003D53F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		813304781FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				813304791FF9262B003D53F7 /* Debug */,
+				8133047A1FF9262B003D53F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8133047B1FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagdUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8133047C1FF9262B003D53F7 /* Debug */,
+				8133047D1FF9262B003D53F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 813304421FF92629003D53F7 /* Project object */;
+}
