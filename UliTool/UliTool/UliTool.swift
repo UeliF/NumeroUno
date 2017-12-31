@@ -32,4 +32,8 @@ public class UliTool
     func status(){
         print("Instance \(name) has current count \(count)")
     }
+    
+    func decrement(amount: Int) {
+        count -= amount
+    }
 }

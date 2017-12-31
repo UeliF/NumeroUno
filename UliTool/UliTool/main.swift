@@ -20,3 +20,5 @@ uliTool.status()
 uliTool.increment()
 uliTool.status()
 
+uliTool.decrement(amount: 100)
+uliTool.status()
