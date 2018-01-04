@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import CoreFoundation
 
 class GameScene: SKScene {
     
@@ -64,7 +65,24 @@ class GameScene: SKScene {
     
     override func mouseDown(with event: NSEvent) {
         self.touchDown(atPoint: event.location(in: self))
+        let answer = dialogOKCancel(question: "Ok?", text: "Choose your answer.")
+
     }
+    
+    func dialogOKCancel(question: String, text: String) -> Bool {
+        let alert: NSAlert = NSAlert()
+        alert.messageText = question
+        alert.informativeText = text
+        alert.alertStyle = NSAlertStyle.informational
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        let res = alert.runModal()
+        if res == NSAlertFirstButtonReturn {
+            return true
+        }
+        return false
+    }
+    
     
     override func mouseDragged(with event: NSEvent) {
         self.touchMoved(toPoint: event.location(in: self))

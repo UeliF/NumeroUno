@@ -16,6 +16,7 @@
 		8133045B1FF9262A003D53F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813304591FF9262A003D53F7 /* Main.storyboard */; };
 		813304661FF9262A003D53F7 /* PerlhuhnJagdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304651FF9262A003D53F7 /* PerlhuhnJagdTests.swift */; };
 		813304711FF9262B003D53F7 /* PerlhuhnJagdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */; };
+		815B8E071FFEC35F00024A22 /* 20171029_173331.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 815B8E061FFEC35F00024A22 /* 20171029_173331.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8133046C1FF9262B003D53F7 /* PerlhuhnJagdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerlhuhnJagdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerlhuhnJagdUITests.swift; sourceTree = "<group>"; };
 		813304721FF9262B003D53F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815B8E061FFEC35F00024A22 /* 20171029_173331.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20171029_173331.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				813304531FF92629003D53F7 /* GameScene.swift */,
 				813304551FF92629003D53F7 /* ViewController.swift */,
 				813304571FF9262A003D53F7 /* Assets.xcassets */,
+				815B8E061FFEC35F00024A22 /* 20171029_173331.jpg */,
 				813304591FF9262A003D53F7 /* Main.storyboard */,
 				8133045C1FF9262A003D53F7 /* Info.plist */,
 			);
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				813304501FF92629003D53F7 /* GameScene.sks in Resources */,
+				815B8E071FFEC35F00024A22 /* 20171029_173331.jpg in Resources */,
 				813304581FF9262A003D53F7 /* Assets.xcassets in Resources */,
 				813304521FF92629003D53F7 /* Actions.sks in Resources */,
 				8133045B1FF9262A003D53F7 /* Main.storyboard in Resources */,
@@ -508,6 +512,7 @@
 				813304771FF9262B003D53F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		813304781FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagdTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				8133047A1FF9262B003D53F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8133047B1FF9262B003D53F7 /* Build configuration list for PBXNativeTarget "PerlhuhnJagdUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				8133047D1FF9262B003D53F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
