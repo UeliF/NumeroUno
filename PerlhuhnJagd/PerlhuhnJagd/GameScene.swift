@@ -33,8 +33,7 @@ class GameScene: SKScene {
     fileprivate func manageSKSpriteNodeTarget(number: Int) {
         //position the target and run its actions
         let target = self.childNode(withName: "//SKSpriteNodeTarget" + String(number)) as! HBSpriteNode
-        let theWindowNumericHeight = self.size.height / 2
-        target.activate(windowNumericHeight: theWindowNumericHeight)
+        target.activate(GameScene: self)
         targets.append(target)
     }
     
@@ -108,40 +107,17 @@ class GameScene: SKScene {
     
     override func mouseDown(with event: NSEvent) {
         self.touchDown(atPoint: event.location(in: self))
-        let mouseX = event.location(in: self).x
-        let mouseY = event.location(in: self).y
-        print("event.location in self: x: " + String(describing: mouseX) + " y: " + String(describing: mouseY))
+
+        print("shot location: x: \(event.location(in: self).x) y: \(event.location(in: self).y)")
 
         //check if cursor clicked on a target
         for target in targets {
-            let targetX =  target.position.x
-            let targetY =  target.position.y
-            let targetName = target.name!
-            print("target \(targetName) location: x: \(targetX as CGFloat) y: \(targetY as CGFloat)")
-
-            let imageNode1Xmin =  targetX - target.size.width / 2
-            let imageNode1Xmax =  targetX + target.size.width / 2
-            let imageNode1Ymin =  targetY - target.size.height / 2
-            let imageNode1Ymax =  targetY + target.size.height / 2
-        
-//            if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax {
-//                print("X match")
-//            }
-//            if mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
-//                print("Y match")
-//            }
-            if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax && mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
-                let theShotValue = target.getShotValue()
-                print("X&Y match on \(targetName) with ShotCount \(theShotValue)")
-                count += theShotValue
-                if let labelShotCount = self.labelShotCount {
-                    labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-                }
-                self.labelShotCount!.text = "\(count) Points!"
-//                if let labelShotCount = self.labelShotCount {
-//                    labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeOut")
-//                }
+            count += target.evaluateShot(shotLocation: event.location(in: self))
+            if let labelShotCount = self.labelShotCount {
+                labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
             }
+            self.labelShotCount!.text = "\(count) Points!"
+            
         }
 
         
