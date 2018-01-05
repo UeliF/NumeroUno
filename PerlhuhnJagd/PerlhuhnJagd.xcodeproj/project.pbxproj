@@ -16,7 +16,8 @@
 		8133045B1FF9262A003D53F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813304591FF9262A003D53F7 /* Main.storyboard */; };
 		813304661FF9262A003D53F7 /* PerlhuhnJagdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304651FF9262A003D53F7 /* PerlhuhnJagdTests.swift */; };
 		813304711FF9262B003D53F7 /* PerlhuhnJagdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */; };
-		815B8E071FFEC35F00024A22 /* 20171029_173331.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 815B8E061FFEC35F00024A22 /* 20171029_173331.jpg */; };
+		81C8ED8F1FFFCBAD0060C9E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8ED8E1FFFCBAD0060C9E8 /* Extensions.swift */; };
+		81C8ED911FFFCF7C0060C9E8 /* HBSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8ED901FFFCF7C0060C9E8 /* HBSpriteNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		8133046C1FF9262B003D53F7 /* PerlhuhnJagdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerlhuhnJagdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerlhuhnJagdUITests.swift; sourceTree = "<group>"; };
 		813304721FF9262B003D53F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		815B8E061FFEC35F00024A22 /* 20171029_173331.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20171029_173331.jpg; sourceTree = "<group>"; };
+		81C8ED8E1FFFCBAD0060C9E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81C8ED901FFFCF7C0060C9E8 /* HBSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +111,10 @@
 				813304531FF92629003D53F7 /* GameScene.swift */,
 				813304551FF92629003D53F7 /* ViewController.swift */,
 				813304571FF9262A003D53F7 /* Assets.xcassets */,
-				815B8E061FFEC35F00024A22 /* 20171029_173331.jpg */,
 				813304591FF9262A003D53F7 /* Main.storyboard */,
 				8133045C1FF9262A003D53F7 /* Info.plist */,
+				81C8ED8E1FFFCBAD0060C9E8 /* Extensions.swift */,
+				81C8ED901FFFCF7C0060C9E8 /* HBSpriteNode.swift */,
 			);
 			path = PerlhuhnJagd;
 			sourceTree = "<group>";
@@ -197,20 +200,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = hub;
 				TargetAttributes = {
 					813304491FF92629003D53F7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					813304601FF9262A003D53F7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 813304491FF92629003D53F7;
 					};
 					8133046B1FF9262B003D53F7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 813304491FF92629003D53F7;
 					};
@@ -242,7 +248,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				813304501FF92629003D53F7 /* GameScene.sks in Resources */,
-				815B8E071FFEC35F00024A22 /* 20171029_173331.jpg in Resources */,
 				813304581FF9262A003D53F7 /* Assets.xcassets in Resources */,
 				813304521FF92629003D53F7 /* Actions.sks in Resources */,
 				8133045B1FF9262A003D53F7 /* Main.storyboard in Resources */,
@@ -273,6 +278,8 @@
 				813304561FF92629003D53F7 /* ViewController.swift in Sources */,
 				813304541FF92629003D53F7 /* GameScene.swift in Sources */,
 				8133044E1FF92629003D53F7 /* AppDelegate.swift in Sources */,
+				81C8ED911FFFCF7C0060C9E8 /* HBSpriteNode.swift in Sources */,
+				81C8ED8F1FFFCBAD0060C9E8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +335,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -336,7 +345,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -377,7 +390,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -385,7 +400,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -418,7 +437,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -431,7 +451,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -445,7 +466,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerlhuhnJagd.app/Contents/MacOS/PerlhuhnJagd";
 			};
 			name = Debug;
@@ -460,7 +482,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerlhuhnJagd.app/Contents/MacOS/PerlhuhnJagd";
 			};
 			name = Release;
@@ -474,7 +497,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = PerlhuhnJagd;
 			};
 			name = Debug;
@@ -488,7 +512,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hub.PerlhuhnJagdUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = PerlhuhnJagd;
 			};
 			name = Release;

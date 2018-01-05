@@ -10,34 +10,76 @@ import SpriteKit
 import GameplayKit
 import CoreFoundation
 
+
+
+
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var label2 : SKLabelNode?
+    private var labelShotCount : SKLabelNode?
     private var emptyNode : SKNode?
     private var spinnyNode : SKShapeNode?
-    private var imageNode1 : SKSpriteNode?
+    private var SKSpriteNodeBGB : SKSpriteNode?
+    private var SKSpriteNodeBGT : SKSpriteNode?
     
+    var targets = [HBSpriteNode]()
+    var count : Int = 0;
+    
+    fileprivate func manageSKSpriteNodeTargets() {
+        for number in 1...3 {
+            manageSKSpriteNodeTarget(number: number)
+        }
+    }
+    
+    fileprivate func manageSKSpriteNodeTarget(number: Int) {
+        //position the target and run its actions
+        let target = self.childNode(withName: "//SKSpriteNodeTarget" + String(number)) as! HBSpriteNode
+        //set the 'wait' position to the bottom of the window  (x:0,y:0 is the center of the window)
+        let windowNumericHeight = self.size.height / 2
+        let initY : CGFloat = -windowNumericHeight
+        
+        //set the 'appear' position to a random position between the middle and top from the window
+        let targetY : CGFloat = CGFloat(Int.randomFromRange(range: Range<Int>(0 ... Int(windowNumericHeight))))
+
+        let runDuration : TimeInterval = TimeInterval(CGFloat(Int.randomFromRange(range: Range<Int>(20 ... 200))) / 100)
+        let waitDuration : TimeInterval = TimeInterval(CGFloat(Int.randomFromRange(range: Range<Int>(20 ... 100))) / 100)
+        
+        let moveUp : SKAction = SKAction.moveTo(y: targetY, duration: runDuration)
+        let moveDown : SKAction = SKAction.moveTo(y: initY, duration: runDuration)
+        
+        target.run(SKAction.repeatForever(SKAction.sequence([SKAction.wait(forDuration: waitDuration),moveUp, moveDown])))
+        
+        targets.append(target)
+    }
+    
+    
+
+    
+    fileprivate func setBackgroundTextures() {
+        self.SKSpriteNodeBGB = self.childNode(withName: "//SKSpriteNodeBGB") as? SKSpriteNode
+        let imageBottom =  #imageLiteral(resourceName: "2017-10-05 15.35.18 Unten")//do your setup here to make a UIImage
+        let textureBottom = SKTexture(image: imageBottom)
+        SKSpriteNodeBGB!.texture = textureBottom
+        SKSpriteNodeBGB!.size = self.size
+        
+        self.SKSpriteNodeBGT = self.childNode(withName: "//SKSpriteNodeBGT") as? SKSpriteNode
+        let imageTop =  #imageLiteral(resourceName: "2017-10-05 15.35.18 Oben")//do your setup here to make a UIImage
+        let textureTop = SKTexture(image: imageTop)
+        SKSpriteNodeBGT!.texture = textureTop
+        SKSpriteNodeBGT!.size = self.size
+    }
     
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
+        self.labelShotCount = self.childNode(withName: "//LabelShotCount") as? SKLabelNode
+        if let labelShotCount = self.labelShotCount {
+            labelShotCount.alpha = 0.0
+            labelShotCount.run(SKAction.fadeIn(withDuration: 2.0))
         }
         
-        // Get label2 node from scene and store it for use later
-        self.label2 = self.childNode(withName: "//helloLabel2") as? SKLabelNode
-        if let label2 = self.label2 {
-            label2.alpha = 0.0
-            label2.run(SKAction.fadeIn(withDuration: 3.0))
-            
-        }
+        self.emptyNode = self.childNode(withName: "//SKNodeEmptyNode")
         
-        self.emptyNode = self.childNode(withName: "//SKNodeEmptyNode") //as? SKNode
-        
+        setBackgroundTextures()
 
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
@@ -52,21 +94,7 @@ class GameScene: SKScene {
                                               SKAction.removeFromParent()]))
         }
         
-        self.imageNode1 = self.childNode(withName: "//SKSpriteNode1") as? SKSpriteNode
-        //let currentY = self.imageNode.
-        //let moveDuration : Duration
-        let initY : CGFloat = -300
-        let targetY : CGFloat = 300
-        let runDuration : TimeInterval = 2
-        let moveUp : SKAction = SKAction.moveTo(y: targetY, duration: runDuration)
-        let moveDown : SKAction = SKAction.moveTo(y: initY, duration: runDuration)
-        if let imageNode1 = self.imageNode1 {
-            imageNode1.run(SKAction.repeatForever(SKAction.sequence([SKAction.wait(forDuration: 0.8),moveUp, moveDown])))
-            let image = #imageLiteral(resourceName: "20171029_173331 2") //do your setup here to make a UIImage
-            let texture = SKTexture(image: image)
-            imageNode1.texture = texture
-        }
-        
+        manageSKSpriteNodeTargets()
     }
     
     
@@ -100,23 +128,35 @@ class GameScene: SKScene {
         let mouseY = event.location(in: self).y
         print("event.location in self: x: " + String(describing: mouseX) + " y: " + String(describing: mouseY))
 
-        let imageNode1X =  self.imageNode1!.position.x
-        let imageNode1Y =  self.imageNode1!.position.y
-        print("object.location in self: x: " + String(describing: imageNode1X) + " y: " + String(describing: imageNode1Y))
+        //check if cursor clicked on a target
+        for target in targets {
+            let targetX =  target.position.x
+            let targetY =  target.position.y
+            let targetName = target.name!
+            print("target \(targetName) location: x: \(targetX as CGFloat) y: \(targetY as CGFloat)")
 
-        let imageNode1Xmin =  imageNode1X - self.imageNode1!.size.width / 2
-        let imageNode1Xmax =  imageNode1X + self.imageNode1!.size.width / 2
-        let imageNode1Ymin =  imageNode1Y - self.imageNode1!.size.height / 2
-        let imageNode1Ymax =  imageNode1Y + self.imageNode1!.size.height / 2
-    
-        if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax {
-            print("X match")
-        }
-        if mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
-            print("Y match")
-        }
-        if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax && mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
-            print("X&Y match")
+            let imageNode1Xmin =  targetX - target.size.width / 2
+            let imageNode1Xmax =  targetX + target.size.width / 2
+            let imageNode1Ymin =  targetY - target.size.height / 2
+            let imageNode1Ymax =  targetY + target.size.height / 2
+        
+//            if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax {
+//                print("X match")
+//            }
+//            if mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
+//                print("Y match")
+//            }
+            if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax && mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
+                print("X&Y match on \(targetName) with ShotCount \(target.ShotCount)")
+                count += target.ShotCount
+                if let labelShotCount = self.labelShotCount {
+                    labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+                }
+                self.labelShotCount!.text = "\(count) Points!"
+//                if let labelShotCount = self.labelShotCount {
+//                    labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeOut")
+//                }
+            }
         }
 
         
@@ -128,11 +168,11 @@ class GameScene: SKScene {
         let alert: NSAlert = NSAlert()
         alert.messageText = question
         alert.informativeText = text
-        alert.alertStyle = NSAlertStyle.informational
+        alert.alertStyle = NSAlert.Style.informational
         alert.addButton(withTitle: "OK")
         alert.addButton(withTitle: "Cancel")
         let res = alert.runModal()
-        if res == NSAlertFirstButtonReturn {
+        if res == NSApplication.ModalResponse.alertFirstButtonReturn {
             return true
         }
         return false
@@ -149,9 +189,9 @@ class GameScene: SKScene {
     
     override func keyDown(with event: NSEvent) {
         switch event.keyCode {
-        case 0x31:
-            if let label = self.label {
-                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        case 0x31:  // space pressed
+            if let labelShotCount = self.labelShotCount {
+                labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
             }
         default:
             print("keyDown: \(event.characters!) keyCode: \(event.keyCode)")
