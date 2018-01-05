@@ -33,26 +33,10 @@ class GameScene: SKScene {
     fileprivate func manageSKSpriteNodeTarget(number: Int) {
         //position the target and run its actions
         let target = self.childNode(withName: "//SKSpriteNodeTarget" + String(number)) as! HBSpriteNode
-        //set the 'wait' position to the bottom of the window  (x:0,y:0 is the center of the window)
-        let windowNumericHeight = self.size.height / 2
-        let initY : CGFloat = -windowNumericHeight
-        
-        //set the 'appear' position to a random position between the middle and top from the window
-        let targetY : CGFloat = CGFloat(Int.randomFromRange(range: Range<Int>(0 ... Int(windowNumericHeight))))
-
-        let runDuration : TimeInterval = TimeInterval(CGFloat(Int.randomFromRange(range: Range<Int>(20 ... 200))) / 100)
-        let waitDuration : TimeInterval = TimeInterval(CGFloat(Int.randomFromRange(range: Range<Int>(20 ... 100))) / 100)
-        
-        let moveUp : SKAction = SKAction.moveTo(y: targetY, duration: runDuration)
-        let moveDown : SKAction = SKAction.moveTo(y: initY, duration: runDuration)
-        
-        target.run(SKAction.repeatForever(SKAction.sequence([SKAction.wait(forDuration: waitDuration),moveUp, moveDown])))
-        
+        let theWindowNumericHeight = self.size.height / 2
+        target.activate(windowNumericHeight: theWindowNumericHeight)
         targets.append(target)
     }
-    
-    
-
     
     fileprivate func setBackgroundTextures() {
         self.SKSpriteNodeBGB = self.childNode(withName: "//SKSpriteNodeBGB") as? SKSpriteNode
@@ -147,8 +131,9 @@ class GameScene: SKScene {
 //                print("Y match")
 //            }
             if mouseX > imageNode1Xmin && mouseX < imageNode1Xmax && mouseY > imageNode1Ymin && mouseY < imageNode1Ymax {
-                print("X&Y match on \(targetName) with ShotCount \(target.ShotCount)")
-                count += target.ShotCount
+                let theShotValue = target.getShotValue()
+                print("X&Y match on \(targetName) with ShotCount \(theShotValue)")
+                count += theShotValue
                 if let labelShotCount = self.labelShotCount {
                     labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
                 }
