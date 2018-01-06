@@ -16,12 +16,6 @@ class HBSpriteNode: SKSpriteNode {
     private var actionRunCount : Int = 0;
     private var lastShotActionRunCount : Int = 0;
 
-    fileprivate func setTexture() {
-        //set the image of the target
-        let image =  #imageLiteral(resourceName: "DSC00885")//do your setup here to make a UIImage
-        let texture = SKTexture(image: image)
-        self.texture = texture
-    }
     
     fileprivate func runActions() {
         //run actions once, then call recursively
@@ -44,7 +38,7 @@ class HBSpriteNode: SKSpriteNode {
         
         //self.run(SKAction.repeatForever(SKAction.sequence([SKAction.wait(forDuration: waitDuration),moveUp, moveDown])))
         
-        self.run(SKAction.sequence([SKAction.wait(forDuration: waitDuration), moveUp, moveDown, moveSideways, SKAction.unhide()])) {
+        self.run(SKAction.sequence([moveSideways, SKAction.unhide(), SKAction.wait(forDuration: waitDuration), moveUp, moveDown])) {
             //run again when done
             self.runActions()
         }
@@ -57,8 +51,8 @@ class HBSpriteNode: SKSpriteNode {
         
         let targetX =  self.position.x
         let targetY =  self.position.y
-        let targetName = self.name!
-        print("target \(targetName) location: x: \(targetX as CGFloat) y: \(targetY as CGFloat)")
+        let targetPoints = self.shotValue
+        print("target \(targetPoints) location: x: \(targetX as CGFloat) y: \(targetY as CGFloat)")
         
         let imageNode1Xmin =  targetX - self.size.width / 2
         let imageNode1Xmax =  targetX + self.size.width / 2
@@ -73,7 +67,7 @@ class HBSpriteNode: SKSpriteNode {
         //            }
         if shotX > imageNode1Xmin && shotX < imageNode1Xmax && shotY > imageNode1Ymin && shotY < imageNode1Ymax {
             let theShotValue = self.getShotValue()
-            print("X&Y match on \(targetName) with ShotCount \(theShotValue)")
+            print("X&Y match on \(targetPoints) with ShotCount \(theShotValue)")
             return theShotValue
         }
         return 0
@@ -97,17 +91,26 @@ class HBSpriteNode: SKSpriteNode {
         }
     }
     
-    func activate(GameScene: GameScene){
-        self.windowNumericHeight = Int(GameScene.size.height) / 2
-        self.windowNumericWidth = Int(GameScene.size.width) / 2
-        print("activating target \(self.name!) with windowNumericHeight \(windowNumericHeight)")
+    init(gameScene: GameScene){
+        let randomWidthHeight = Int.randomFromRange(range: Range(50 ... 100))
+        let texture = SKTexture(image: Resources.shared.randomTargetImage)
+        super.init(texture: texture, color: NSColor.white, size: CGSize(width: randomWidthHeight, height: randomWidthHeight))
+        
+        //safe these values for each action run when the location is changed
+        self.windowNumericHeight = Int(gameScene.size.height) / 2
+        self.windowNumericWidth = Int(gameScene.size.width) / 2
+        
+        print("activating target \(self.shotValue) with windowNumericHeight \(windowNumericHeight)")
         runActions()
     }
     
+    // used for .copy() operation
+    override init(texture: SKTexture!, color: NSColor, size: CGSize) {
+        super.init(texture: texture, color: color, size: size)
+    }
+   
     required init(coder aCoder: NSCoder){
         super.init(coder: aCoder)!
-        
-        setTexture()
     }
 }
 

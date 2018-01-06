@@ -8,47 +8,40 @@
 
 import SpriteKit
 import GameplayKit
-import CoreFoundation
-
-
-
 
 class GameScene: SKScene {
     
     private var labelShotCount : SKLabelNode?
     private var emptyNode : SKNode?
     private var spinnyNode : SKShapeNode?
-    private var SKSpriteNodeBGB : SKSpriteNode?
-    private var SKSpriteNodeBGT : SKSpriteNode?
+    private var SKSpriteNodeForeground : SKSpriteNode?
+    private var SKSpriteNodeBackground : SKSpriteNode?
     
     var targets = [HBSpriteNode]()
     var count : Int = 0;
     
-    fileprivate func manageSKSpriteNodeTargets() {
-        for number in 1...3 {
-            manageSKSpriteNodeTarget(number: number)
+    fileprivate func createTargets() {
+        var target : HBSpriteNode?
+        for _ in 1...10 {
+            target = HBSpriteNode(gameScene: self)
+            self.addChild(target!)
+            targets.append(target!)
         }
     }
     
-    fileprivate func manageSKSpriteNodeTarget(number: Int) {
-        //position the target and run its actions
-        let target = self.childNode(withName: "//SKSpriteNodeTarget" + String(number)) as! HBSpriteNode
-        target.activate(GameScene: self)
-        targets.append(target)
-    }
-    
     fileprivate func setBackgroundTextures() {
-        self.SKSpriteNodeBGB = self.childNode(withName: "//SKSpriteNodeBGB") as? SKSpriteNode
+        self.SKSpriteNodeForeground = self.childNode(withName: "//SKSpriteNodeForeground") as? SKSpriteNode
         let imageBottom =  #imageLiteral(resourceName: "2017-10-05 15.35.18 Unten")//do your setup here to make a UIImage
         let textureBottom = SKTexture(image: imageBottom)
-        SKSpriteNodeBGB!.texture = textureBottom
-        SKSpriteNodeBGB!.size = self.size
+        SKSpriteNodeForeground!.texture = textureBottom
+        SKSpriteNodeForeground!.size = self.size
+        //SKSpriteNodeForeground!.isHidden = true
         
-        self.SKSpriteNodeBGT = self.childNode(withName: "//SKSpriteNodeBGT") as? SKSpriteNode
+        self.SKSpriteNodeBackground = self.childNode(withName: "//SKSpriteNodeBackground") as? SKSpriteNode
         let imageTop =  #imageLiteral(resourceName: "2017-10-05 15.35.18 Oben")//do your setup here to make a UIImage
         let textureTop = SKTexture(image: imageTop)
-        SKSpriteNodeBGT!.texture = textureTop
-        SKSpriteNodeBGT!.size = self.size
+        SKSpriteNodeBackground!.texture = textureTop
+        SKSpriteNodeBackground!.size = self.size
     }
     
     override func didMove(to view: SKView) {
@@ -77,7 +70,7 @@ class GameScene: SKScene {
                                               SKAction.removeFromParent()]))
         }
         
-        manageSKSpriteNodeTargets()
+        createTargets()
     }
     
     
@@ -112,17 +105,18 @@ class GameScene: SKScene {
 
         //check if cursor clicked on a target
         for target in targets {
-            count += target.evaluateShot(shotLocation: event.location(in: self))
-            if let labelShotCount = self.labelShotCount {
-                labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            let newPoints =  target.evaluateShot(shotLocation: event.location(in: self))
+            if newPoints > 0 {
+                count += newPoints
+                if let labelShotCount = self.labelShotCount {
+                    labelShotCount.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+                }
+                self.labelShotCount!.text = "\(count) Points!"
+            } else {
+                // böööp!
             }
-            self.labelShotCount!.text = "\(count) Points!"
-            
         }
-
-        
     //    let answer = dialogOKCancel(question: "Ok?", text: "Choose your answer.")
-
     }
     
     func dialogOKCancel(question: String, text: String) -> Bool {

@@ -18,6 +18,7 @@
 		813304711FF9262B003D53F7 /* PerlhuhnJagdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813304701FF9262B003D53F7 /* PerlhuhnJagdUITests.swift */; };
 		81C8ED8F1FFFCBAD0060C9E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8ED8E1FFFCBAD0060C9E8 /* Extensions.swift */; };
 		81C8ED911FFFCF7C0060C9E8 /* HBSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8ED901FFFCF7C0060C9E8 /* HBSpriteNode.swift */; };
+		81C8ED952000FD340060C9E8 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8ED942000FD340060C9E8 /* Resources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		813304721FF9262B003D53F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81C8ED8E1FFFCBAD0060C9E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		81C8ED901FFFCF7C0060C9E8 /* HBSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBSpriteNode.swift; sourceTree = "<group>"; };
+		81C8ED942000FD340060C9E8 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				8133045C1FF9262A003D53F7 /* Info.plist */,
 				81C8ED8E1FFFCBAD0060C9E8 /* Extensions.swift */,
 				81C8ED901FFFCF7C0060C9E8 /* HBSpriteNode.swift */,
+				81C8ED942000FD340060C9E8 /* Resources.swift */,
 			);
 			path = PerlhuhnJagd;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				813304561FF92629003D53F7 /* ViewController.swift in Sources */,
 				813304541FF92629003D53F7 /* GameScene.swift in Sources */,
 				8133044E1FF92629003D53F7 /* AppDelegate.swift in Sources */,
+				81C8ED952000FD340060C9E8 /* Resources.swift in Sources */,
 				81C8ED911FFFCF7C0060C9E8 /* HBSpriteNode.swift in Sources */,
 				81C8ED8F1FFFCBAD0060C9E8 /* Extensions.swift in Sources */,
 			);
